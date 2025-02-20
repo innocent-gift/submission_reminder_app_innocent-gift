@@ -5,12 +5,13 @@ read name
 # these are files and folders that makes Application and their permitions
 mkdir submission_reminder_$name
 mkdir submission_reminder_$name/app
-touch submission_reminder_$name/app/reminder.sh
-mkdir submission_reminder_$name/modules
-touch submission_reminder_$name/modules/functions.sh
-mkdir submission_reminder_$name/assets
-touch submission_reminder_$name/assets/submissions.txt
 mkdir submission_reminder_$name/config
+mkdir submission_reminder_$name/modules
+mkdir submission_reminder_$name/assets
+touch submission_reminder_$name/app/reminder.sh
+touch submission_reminder_$name/modules/functions.sh
+touch submission_reminder_$name/assets/submissions.txt
+touch submission_reminder_$name/app/reminder.sh
 touch submission_reminder_$name/config/config.env
 touch submission_reminder_$name/startup.sh
 chmod +x submission_reminder_$name/startup.sh
@@ -74,6 +75,6 @@ cat >> submission_reminder_$name/startup.sh <<EOF
 #!/bin/bash
 echo "Starting app.."
 cd submission_reminder_$name
-./app/reminder.sh  # FIXED: Removed extra directory prefix
+./app/reminder.sh
 EOF
 
